@@ -1,6 +1,6 @@
 import heroImg from "@/assets/hero.jpg";
 import { Button } from "@/components/ui/button";
-import { Search, MapPin, Home, DollarSign } from "lucide-react";
+import { Search, MapPin, Home, DollarSign, ShieldCheck, BadgeCheck, Star, Phone, Clock, TrendingUp } from "lucide-react";
 
 export function Hero() {
   return (
@@ -18,8 +18,8 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto px-5 lg:px-8 w-full">
         <div className="max-w-3xl text-white animate-fade-up">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-gold/15 border border-gold/40 text-gold text-xs font-semibold uppercase tracking-widest">
-            Nigeria's Trusted Real Estate Partner
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/15 border border-gold/40 text-gold text-xs font-semibold uppercase tracking-widest">
+            <BadgeCheck size={14} /> Nigeria's Trusted Real Estate Partner
           </span>
           <h1 className="mt-5 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
             Find Your Dream <span className="text-gold">Property</span> in Nigeria
@@ -29,13 +29,42 @@ export function Hero() {
             properties with Nigeria's most trusted real estate agency.
           </p>
 
+          {/* Social proof row */}
+          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/85">
+            <div className="flex items-center gap-2">
+              <div className="flex gap-0.5 text-gold">
+                {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
+              </div>
+              <span><strong className="text-white">4.9/5</strong> from 1,000+ clients</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <ShieldCheck size={16} className="text-gold" />
+              <span>100% Verified Listings</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock size={16} className="text-gold" />
+              <span>24/7 Client Support</span>
+            </div>
+          </div>
+
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild variant="gold" size="xl">
               <a href="#properties">Browse Properties</a>
             </Button>
             <Button asChild variant="outlineGold" size="xl">
-              <a href="#contact">Book a Consultation</a>
+              <a href="#contact">Book Free Consultation</a>
             </Button>
+          </div>
+
+          {/* Quick contact strip */}
+          <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
+            <a href="tel:+2348000000000" className="inline-flex items-center gap-2 text-white/90 hover:text-gold transition-smooth">
+              <Phone size={16} className="text-gold" /> <span>Call: +234 800 000 0000</span>
+            </a>
+            <span className="hidden sm:inline text-white/30">•</span>
+            <span className="inline-flex items-center gap-2 text-white/80">
+              <TrendingUp size={16} className="text-gold" /> 28 properties sold this month
+            </span>
           </div>
         </div>
 
