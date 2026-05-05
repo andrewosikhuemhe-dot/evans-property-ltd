@@ -43,8 +43,8 @@ export function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-smooth ${
         scrolled
-          ? "bg-navy/95 backdrop-blur-md shadow-luxury"
-          : "bg-transparent"
+          ? "bg-navy shadow-luxury"
+          : "bg-navy/90 backdrop-blur-md"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-5 lg:px-8 h-18 py-4 flex items-center justify-between">
