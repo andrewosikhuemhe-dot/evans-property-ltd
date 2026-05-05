@@ -51,7 +51,7 @@ export function Hero() {
             <Button asChild variant="gold" size="xl">
               <a href="#properties">Browse Properties</a>
             </Button>
-            <Button asChild variant="outlineGold" size="xl">
+            <Button asChild variant="navy" size="xl" className="bg-white text-navy hover:bg-white/90">
               <a href="#contact">Book Free Consultation</a>
             </Button>
           </div>
