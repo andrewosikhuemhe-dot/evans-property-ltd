@@ -1,26 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { Stats } from "@/components/site/Stats";
+import { FeaturedProperties } from "@/components/site/FeaturedProperties";
+import { Urgency } from "@/components/site/Urgency";
+import { About } from "@/components/site/About";
+import { Services } from "@/components/site/Services";
+import { Agents } from "@/components/site/Agents";
+import { Testimonials } from "@/components/site/Testimonials";
+import { FAQ } from "@/components/site/FAQ";
+import { Newsletter } from "@/components/site/Newsletter";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { FloatingActions } from "@/components/site/FloatingActions";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Evans Property LTD — Premium Real Estate in Nigeria" },
+      { name: "description", content: "Buy, sell and rent verified luxury properties across Nigeria with Evans Property LTD — Nigeria's most trusted real estate agency." },
+      { property: "og:title", content: "Evans Property LTD — Premium Real Estate in Nigeria" },
+      { property: "og:description", content: "Find your dream home in Nigeria with verified listings, expert agents and nationwide coverage." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="min-h-screen bg-background">
+      <Navbar />
+      <Hero />
+      <Stats />
+      <FeaturedProperties />
+      <Urgency />
+      <About />
+      <Services />
+      <Agents />
+      <Testimonials />
+      <FAQ />
+      <Newsletter />
+      <Contact />
+      <Footer />
+      <FloatingActions />
+    </main>
+  );
 }
