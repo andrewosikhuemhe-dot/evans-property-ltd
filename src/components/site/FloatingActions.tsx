@@ -16,7 +16,7 @@ export function FloatingActions() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="grid place-items-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-luxury hover:scale-110 transition-smooth"
+        className="grid place-items-center w-14 h-14 rounded-full bg-whatsapp text-white shadow-luxury hover:scale-110 transition-smooth"
       >
         <MessageCircle size={26} />
       </a>
