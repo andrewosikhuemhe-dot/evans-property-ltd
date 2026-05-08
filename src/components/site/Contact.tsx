@@ -14,8 +14,8 @@ export function Contact() {
 
           <div className="mt-10 space-y-6">
             {[
-              { icon: Phone, label: "Phone", value: "070-441-31476" },
-              { icon: Mail, label: "Email", value: "andrewosikhuemhe@gmail.com" },
+              { icon: Phone, label: "Phone", value: "+234 800 EVANS NG" },
+              { icon: Mail, label: "Email", value: "hello@evansproperty.ng" },
               { icon: MapPin, label: "Office", value: "12 Admiralty Way, Lekki Phase 1, Lagos, Nigeria" },
             ].map((c) => (
               <div key={c.label} className="flex items-start gap-4">
@@ -32,35 +32,23 @@ export function Contact() {
         </div>
 
         <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
+          onSubmit={(e) => e.preventDefault()}
           className="bg-white text-foreground rounded-2xl p-8 shadow-luxury space-y-5"
         >
-          <input type="hidden" name="form-name" value="contact" />
-          <p className="hidden">
-            <label>Don't fill this out: <input name="bot-field" /></label>
-          </p>
           <h3 className="font-display text-2xl font-bold text-navy">Send Us a Message</h3>
           <div>
-            <label htmlFor="contact-name" className="text-sm font-medium text-foreground">Full Name</label>
-            <input id="contact-name" name="name" required maxLength={100} type="text"
+            <label className="text-sm font-medium text-foreground">Full Name</label>
+            <input required maxLength={100} type="text"
               className="mt-1 w-full px-4 py-3 rounded-lg bg-secondary outline-none focus:ring-2 focus:ring-gold" />
           </div>
           <div>
-            <label htmlFor="contact-email" className="text-sm font-medium text-foreground">Email</label>
-            <input id="contact-email" name="email" required maxLength={255} type="email"
+            <label className="text-sm font-medium text-foreground">Email</label>
+            <input required maxLength={255} type="email"
               className="mt-1 w-full px-4 py-3 rounded-lg bg-secondary outline-none focus:ring-2 focus:ring-gold" />
           </div>
           <div>
-            <label htmlFor="contact-phone" className="text-sm font-medium text-foreground">Phone</label>
-            <input id="contact-phone" name="phone" required maxLength={30} type="tel"
-              className="mt-1 w-full px-4 py-3 rounded-lg bg-secondary outline-none focus:ring-2 focus:ring-gold" />
-          </div>
-          <div>
-            <label htmlFor="contact-message" className="text-sm font-medium text-foreground">Message</label>
-            <textarea id="contact-message" name="message" required maxLength={1000} rows={4}
+            <label className="text-sm font-medium text-foreground">Message</label>
+            <textarea required maxLength={1000} rows={4}
               className="mt-1 w-full px-4 py-3 rounded-lg bg-secondary outline-none focus:ring-2 focus:ring-gold resize-none" />
           </div>
           <Button variant="navy" size="lg" className="w-full" type="submit">Contact Us Today</Button>

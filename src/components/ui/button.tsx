@@ -14,11 +14,11 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        ghost: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         link: "text-primary underline-offset-4 hover:underline",
         gold: "bg-gradient-gold text-navy font-semibold shadow-gold hover:brightness-110 hover:-translate-y-0.5",
         navy: "bg-navy text-white shadow-luxury hover:bg-navy/90",
-        outlineGold: "border-2 border-gold text-gold bg-transparent hover:bg-gold hover:text-navy",
+        outlineGold: "bg-gold text-navy font-semibold shadow-gold hover:brightness-110",
       },
       size: {
         default: "h-10 px-5 py-2",

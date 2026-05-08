@@ -12,11 +12,11 @@ export function FloatingActions() {
   return (
     <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
       <a
-        href="https://wa.me/2347044131476"
+        href="https://wa.me/2348000000000"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="grid place-items-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-luxury hover:scale-110 transition-smooth"
+        className="grid place-items-center w-14 h-14 rounded-full bg-whatsapp text-white shadow-luxury hover:scale-110 transition-smooth"
       >
         <MessageCircle size={26} />
       </a>

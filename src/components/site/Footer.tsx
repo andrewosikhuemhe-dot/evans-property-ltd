@@ -35,8 +35,8 @@ export function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4 font-display">Contact</h4>
           <ul className="space-y-2 text-sm">
-            <li>070-441-31476</li>
-            <li>andrewosikhuemhe@gmail.com</li>
+            <li>+234 800 EVANS NG</li>
+            <li>hello@evansproperty.ng</li>
             <li>12 Admiralty Way, Lekki, Lagos</li>
           </ul>
         </div>
