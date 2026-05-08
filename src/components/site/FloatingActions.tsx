@@ -12,7 +12,7 @@ export function FloatingActions() {
   return (
     <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
       <a
-        href="https://wa.me/2348000000000"
+        href="https://wa.me/2347044131476"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

@@ -58,8 +58,8 @@ export function Hero() {
 
           {/* Quick contact strip */}
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
-            <a href="tel:+2348000000000" className="inline-flex items-center gap-2 text-white/90 hover:text-gold transition-smooth">
-              <Phone size={16} className="text-gold" /> <span>Call: +234 800 000 0000</span>
+            <a href="tel:+2347044131476" className="inline-flex items-center gap-2 text-white/90 hover:text-gold transition-smooth">
+              <Phone size={16} className="text-gold" /> <span>Call: 070-441-31476</span>
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
             <span className="inline-flex items-center gap-2 text-white/80">

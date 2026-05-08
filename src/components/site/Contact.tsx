@@ -14,8 +14,8 @@ export function Contact() {
 
           <div className="mt-10 space-y-6">
             {[
-              { icon: Phone, label: "Phone", value: "+234 800 EVANS NG" },
-              { icon: Mail, label: "Email", value: "hello@evansproperty.ng" },
+              { icon: Phone, label: "Phone", value: "070-441-31476" },
+              { icon: Mail, label: "Email", value: "andrewosikhuemhe@gmail.com" },
               { icon: MapPin, label: "Office", value: "12 Admiralty Way, Lekki Phase 1, Lagos, Nigeria" },
             ].map((c) => (
               <div key={c.label} className="flex items-start gap-4">
