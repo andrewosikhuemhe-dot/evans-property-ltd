@@ -1,7 +1,35 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { toast } from "sonner";
 
 export function Contact() {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    setSubmitting(true);
+    try {
+      const data = new FormData(form);
+      const res = await fetch("https://formspree.io/f/mwvyrevw", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        toast.success("Message sent! We'll get back to you shortly.");
+        form.reset();
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Network error. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-20 lg:py-28 bg-navy text-white">
       <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-12">
@@ -32,20 +60,9 @@ export function Contact() {
         </div>
 
         <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
           className="bg-white text-foreground rounded-2xl p-8 shadow-luxury space-y-5"
         >
-          {/* Netlify form detection */}
-          <input type="hidden" name="form-name" value="contact" />
-          <p className="hidden">
-            <label>
-              Don't fill this out if you're human: <input name="bot-field" />
-            </label>
-          </p>
-
           <h3 className="font-display text-2xl font-bold text-navy">Send Us a Message</h3>
 
           <div>
@@ -92,7 +109,9 @@ export function Contact() {
               className="mt-1 w-full px-4 py-3 rounded-lg bg-secondary outline-none focus:ring-2 focus:ring-gold resize-none"
             />
           </div>
-          <Button variant="navy" size="lg" className="w-full" type="submit">Contact Us Today</Button>
+          <Button variant="navy" size="lg" className="w-full" type="submit" disabled={submitting}>
+            {submitting ? "Sending..." : "Contact Us Today"}
+          </Button>
         </form>
       </div>
     </section>
