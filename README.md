@@ -19,4 +19,3 @@ A modern real estate website for buying, selling, and renting properties across 
 - **Email:** hello@evansproperty.ng
 - **Phone:** +234 800 EVANS NG
 - **Office:** Lekki Phase 1, Lagos, Nigeria
-
